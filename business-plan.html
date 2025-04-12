@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labneh & Co. Business Plan</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            /* Body text font */
+            color: #4a4a4a;
+            /* Slightly softer black */
+            line-height: 1.7;
+            background-color: #fdfcf9;
+            /* Very light cream background */
+        }
+
+        .page-wrapper {
+            display: flex;
+            max-width: 1200px;
+            /* Slightly wider */
+            margin: 0 auto;
+        }
+
+        .sidebar-nav {
+            width: 250px;
+            /* Fixed width for sidebar */
+            position: sticky;
+            top: 20px;
+            /* Sticky position */
+            height: calc(100vh - 40px);
+            /* Full height minus padding */
+            overflow-y: auto;
+            /* Allow scrolling if needed */
+            padding-right: 30px;
+            border-right: 1px solid #e0d8c0;
+            /* Separator line */
+        }
+
+        .sidebar-nav h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.1rem;
+            color: #5d4037;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-nav li a {
+            display: block;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            color: #7b5c52;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+            /* Indicator space */
+            padding-left: 10px;
+        }
+
+        .sidebar-nav li a:hover {
+            color: #5d4037;
+            background-color: #f9f5f0;
+            border-left-color: #a1887f;
+            /* Hover indicator */
+        }
+
+        .sidebar-nav li a.active {
+            color: #5d4037;
+            font-weight: bold;
+            border-left-color: #5d4037;
+            /* Active indicator */
+            background-color: #f9f5f0;
+        }
+
+        .content-container {
+            flex: 1;
+            /* Takes remaining space */
+            padding: 40px 0 40px 50px;
+            /* Padding around content */
+        }
+
+        .logo {
+            height: 120px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .cover-page {
+            height: 90vh;
+            /* Use viewport height */
+            max-height: 800px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #f9f5f0;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            /* Increased spacing */
+            padding: 40px;
+        }
+
+        section {
+            /* Replaced .section with semantic section */
+            margin-bottom: 60px;
+            /* Increased spacing */
+            padding-top: 60px;
+            /* Add padding for sticky nav offset */
+            margin-top: -60px;
+            /* Negative margin to counteract padding */
+        }
+
+        h1 {
+            /* Title on cover page */
+            font-family: 'Merriweather', serif;
+            font-size: 3rem;
+            /* Larger */
+            margin-bottom: 15px;
+            color: #5d4037;
+        }
+
+        h2 {
+            /* Section Titles */
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            /* Larger */
+            margin-bottom: 25px;
+            /* Increased spacing */
+            color: #5d4037;
+            border-bottom: 2px solid #e0d8c0;
+            padding-bottom: 15px;
+            /* Increased padding */
+        }
+
+        h3 {
+            /* Sub-Section Titles */
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #7b5c52;
+        }
+
+        h4 {
+            /* Minor headings */
+            font-family: 'Merriweather', serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #7b5c52;
+            font-weight: bold;
+        }
+
+        p,
+        ul,
+        ol,
+        table {
+            margin-bottom: 20px;
+        }
+
+        ul:not(.list-none) {
+            /* Default lists */
+            list-style-type: none;
+            /* Remove default bullets */
+            padding-left: 0;
+        }
+
+        ul:not(.list-none) li {
+            position: relative;
+            padding-left: 25px;
+            /* Space for custom bullet */
+            margin-bottom: 8px;
+        }
+
+        ul:not(.list-none) li::before {
+            /* Custom bullet */
+            content: "\f0da";
+            /* Font Awesome icon (adjust as needed) */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: #a1887f;
+            /* Bullet color */
+            font-size: 0.9em;
+        }
+
+        ol li {
+            margin-bottom: 8px;
+        }
+
+        .menu-item {
+            border-bottom: 1px dashed #ccc;
+            /* Dashed line */
+            padding: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+
+        .menu-item-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            /* Slightly larger */
+            color: #5d4037;
+            flex-grow: 1;
+            margin-right: 15px;
+        }
+
+        .menu-item-price {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #5d4037;
+            white-space: nowrap;
+            /* Prevent price wrapping */
+        }
+
+        .menu-item-description {
+            font-style: normal;
+            /* Removed italic */
+            color: #666;
+            font-size: 0.9rem;
+            width: 100%;
+            /* Take full width below name/price */
+            margin-top: 5px;
+        }
+
+        .chart-container,
+        .organizational-chart {
+            width: 100%;
+            min-height: 350px;
+            /* Ensure minimum height */
+            margin: 30px 0;
+            border: 1px solid #e0d8c0;
+            padding: 25px;
+            /* Increased padding */
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            /* Subtle shadow */
+        }
+
+        .accent-box {
+            background-color: #f9f5f0;
+            border-left: 5px solid #a1887f;
+            /* Thicker border */
+            padding: 25px;
+            /* Increased padding */
+            margin: 30px 0;
+            /* Increased margin */
+            border-radius: 0 8px 8px 0;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+            /* Subtle shadow */
+        }
+
+        .accent-box h4 {
+            margin-top: 0;
+            /* Remove top margin for h4 inside */
+            color: #5d4037;
+        }
+
+        .color-swatch {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            border-radius: 50%;
+            /* Circular swatches */
+            border: 1px solid #ddd;
+            position: relative;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch p {
+            position: absolute;
+            bottom: -30px;
+            /* Position label below */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            text-align: center;
+            width: 100px;
+            margin-bottom: 0;
+            color: #666;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            /* Subtle shadow */
+            border-radius: 8px;
+            /* Rounded corners for table */
+            overflow: hidden;
+            /* Ensures radius clips content */
+        }
+
+        th,
+        td {
+            padding: 14px 18px;
+            /* Increased padding */
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            /* Lighter border */
+        }
+
+        th {
+            background-color: #f9f5f0;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            /* Uppercase headers */
+            letter-spacing: 0.5px;
+            color: #5d4037;
+        }
+
+        tbody tr:hover {
+            /* Use tbody to avoid hover on header */
+            background-color: #f5f5f5;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+            /* Remove border on last row */
+        }
+
+        .photo-placeholder {
+            background-color: #f0f0f0;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            border-radius: 8px;
+            color: #888;
+            /* Darker placeholder text */
+            border: 2px dashed #ccc;
+            /* Dashed border */
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid #e0d8c0;
+        }
+
+        /* Specific SVG adjustments if needed */
+        .chart-container svg,
+        .organizational-chart svg {
+            max-height: 300px;
+            /* Limit SVG height */
+            display: block;
+            margin: 0 auto;
+        }
+
+        .cover-page .logo text {
+            font-weight: bold;
+        }
+
+        /* Make logo text bold */
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebarNav" data-bs-offset="100">
+    <!-- Offset needed for scrollspy accuracy -->
+    <div class="page-wrapper">
+        <!-- Sticky Sidebar Navigation -->
+        <nav class="sidebar-nav" id="sidebarNav">
+            <h3 class="text-center mb-4">
+                <a href="#top" class="text-lg font-bold text-decoration-none text-gray-800">Labneh & Co.</a>
+            </h3>
+            <ul>
+                <li><a href="#executive-summary">1. Executive Summary</a></li>
+                <li><a href="#business-concept">2. Business Concept & USP</a></li>
+                <li><a href="#market-analysis">3. Market Analysis</a></li>
+                <li><a href="#location-facility">4. Location & Facility</a></li>
+                <li><a href="#menu">5. Menu & Food Concept</a></li>
+                <li><a href="#operational-plan">6. Operational Plan</a></li>
+                <li><a href="#marketing">7. Marketing & Branding</a></li>
+                <li><a href="#financial">8. Financial Projections</a></li>
+                <li><a href="#risk">9. Risk Assessment</a></li>
+                <li><a href="#conclusion">10. Conclusion</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content-container">
+            <!-- Cover Page -->
+            <div id="top" class="cover-page"> <!-- Added id="top" for logo link -->
+                <svg class="logo mb-6" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="90" fill="#f9f5f0" stroke="#a1887f" stroke-width="3" />
+                    <path d="M50,100 Q100,50 150,100 Q100,150 50,100" fill="none" stroke="#5d4037" stroke-width="3" />
+                    <text x="100" y="100" text-anchor="middle" dominant-baseline="central"
+                        font-family="'Merriweather', serif" font-size="18" fill="#5d4037">Labneh & Co.</text>
+                    <text x="100" y="125" text-anchor="middle" dominant-baseline="central"
+                        font-family="'Lato', sans-serif" font-size="10" fill="#7b5c52">EST. 2025</text>
+                </svg>
+                <h1 class="font-bold">BUSINESS PLAN</h1>
+                <h2 class="text-3xl mt-2 border-0 font-normal">Labneh & Co.</h2> <!-- Removed border from cover H2 -->
+                <p class="text-xl mt-3 text-gray-700">A Premier Cheese-Focused Restaurant in Doha, Qatar</p>
+                <p class="mt-10 text-gray-600 text-sm">Prepared: April 2025</p>
+                <p class="text-gray-600 text-sm"><i class="fas fa-lock mr-1"></i> Confidential Document</p>
+            </div>
+
+            <!-- Executive Summary -->
+            <section id="executive-summary">
+                <h2><i class="fas fa-clipboard-list mr-2 text-2xl text-a1887f"></i> 1. Executive Summary</h2>
+                <p>Labneh & Co. will be a unique dining concept in Doha featuring cheese-based dishes complemented by
+                    premium chicken and beef options. The restaurant will blend traditional Arabic cheese preparations
+                    with international fusion elements to create a distinctive culinary experience that appeals to both
+                    locals and expatriates in Qatar's diverse dining scene.</p>
+
+                <div class="accent-box">
+                    <h4><i class="fas fa-lightbulb mr-2 text-a1887f"></i>Business Opportunity</h4>
+                    <p>The restaurant will capitalize on the growing trend of experiential dining in Qatar, where
+                        customers seek immersive culinary experiences that highlight both local heritage and global
+                        influences. With its strategic focus on high-quality ingredients and innovative cheese-based
+                        menu items, Labneh & Co. is positioned to capture a profitable share of Doha's expanding
+                        restaurant market, which is projected to grow at a CAGR of 9.11% to reach USD 3.09 billion by
+                        2030.</p>
+                </div>
+
+                <p>Our projected initial investment amounts to QAR 3,200,000 (updated from finance section) with an
+                    expected breakeven point within 18-24 months of operation. The business aims to achieve a return on
+                    investment of 25-30% by the end of Year 3.</p>
+            </section>
+
+            <!-- Business Concept -->
+            <section id="business-concept">
+                <h2><i class="fas fa-utensils mr-2 text-2xl text-a1887f"></i> 2. Business Concept & USP</h2>
+                <h3>Concept</h3>
+                <p>Labneh & Co. will be a modern, upscale casual dining restaurant that celebrates cheese in all its
+                    forms, with particular emphasis on Middle Eastern cheese varieties and their creative fusion with
+                    international cuisines. The restaurant will feature an open kitchen concept where guests can observe
+                    the cheese-making process for certain dishes, creating an interactive dining experience.</p>
+
+                <h3>Unique Selling Proposition (USP)</h3>
+                <ul>
+                    <li>First dedicated cheese-focused restaurant in Doha with both traditional and fusion offerings
+                    </li>
+                    <li>In-house cheese production for select items, ensuring freshness and uniqueness</li>
+                    <li>Interactive dining experience including potential cheese-tasting flights and visible preparation
+                    </li>
+                    <li>Menu that respects local culinary traditions while offering innovative interpretations</li>
+                    <li>Premium halal meat selections carefully chosen to complement the cheese-focused dishes</li>
+                </ul>
+
+                <div class="chart-container">
+                    <h4 class="text-center mb-4">Concept Visualization</h4>
+                    <svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Central concept -->
+                        <circle cx="400" cy="150" r="80" fill="#f9f5f0" stroke="#5d4037" stroke-width="2" />
+                        <text x="400" y="145" text-anchor="middle" font-family="'Merriweather', serif" font-size="18"
+                            fill="#5d4037">Labneh & Co.</text>
+                        <text x="400" y="168" text-anchor="middle" font-size="12" fill="#7b5c52">Cheese-Focused
+                            Dining</text>
+
+                        <!-- Surrounding elements (Styled slightly better) -->
+                        <g class="concept-node">
+                            <circle cx="200" cy="100" r="60" fill="#f9f5f0" stroke="#a1887f" stroke-width="2" />
+                            <text x="200" y="95" text-anchor="middle" font-size="14" fill="#5d4037">Traditional</text>
+                            <text x="200" y="115" text-anchor="middle" font-size="14" fill="#5d4037">Arabic
+                                Cheese</text>
+                        </g>
+                        <g class="concept-node">
+                            <circle cx="600" cy="100" r="60" fill="#f9f5f0" stroke="#a1887f" stroke-width="2" />
+                            <text x="600" y="95" text-anchor="middle" font-size="14" fill="#5d4037">International</text>
+                            <text x="600" y="115" text-anchor="middle" font-size="14" fill="#5d4037">Fusion</text>
+                        </g>
+                        <g class="concept-node">
+                            <circle cx="200" cy="220" r="60" fill="#f9f5f0" stroke="#a1887f" stroke-width="2" />
+                            <text x="200" y="215" text-anchor="middle" font-size="14" fill="#5d4037">Premium</text>
+                            <text x="200" y="235" text-anchor="middle" font-size="14" fill="#5d4037">Meats</text>
+                        </g>
+                        <g class="concept-node">
+                            <circle cx="600" cy="220" r="60" fill="#f9f5f0" stroke="#a1887f" stroke-width="2" />
+                            <text x="600" y="215" text-anchor="middle" font-size="14" fill="#5d4037">Interactive</text>
+                            <text x="600" y="235" text-anchor="middle" font-size="14" fill="#5d4037">Experience</text>
+                        </g>
+
+                        <!-- Connecting lines -->
+                        <line x1="320" y1="130" x2="260" y2="110" stroke="#a1887f" stroke-width="1.5" />
+                        <line x1="480" y1="130" x2="540" y2="110" stroke="#a1887f" stroke-width="1.5" />
+                        <line x1="320" y1="170" x2="260" y2="200" stroke="#a1887f" stroke-width="1.5" />
+                        <line x1="480" y1="170" x2="540" y2="200" stroke="#a1887f" stroke-width="1.5" />
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Market Analysis -->
+            <section id="market-analysis">
+                <h2><i class="fas fa-chart-pie mr-2 text-2xl text-a1887f"></i> 3. Market Analysis</h2>
+
+                <h3>Target Market Demographics</h3>
+                <p>Our target audience includes affluent Qatari nationals, diverse expatriate communities (Western,
+                    Arab, Asian), and tourists seeking unique culinary experiences. We aim for a broad appeal across age
+                    groups (25-65) interested in quality dining.</p>
+                <div class="chart-container">
+                    <h4 class="text-center mb-4">Customer Segmentation (Illustrative)</h4>
+                    <svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Pie chart -->
+                        <g transform="translate(300, 150)"> <!-- Adjusted position for legend -->
+                            <!-- Western Expatriates - 30% (108 deg) -->
+                            <path d="M0,0 L0,-140 A140,140 0 0,1 133.06,43.26 z" fill="#8d6e63" />
+                            <!-- Qatari Nationals - 25% (90 deg) -->
+                            <path d="M0,0 L133.06,43.26 A140,140 0 0,1 -43.26,133.06 z" fill="#5d4037" />
+                            <!-- Arab Expatriates - 20% (72 deg) -->
+                            <path d="M0,0 L-43.26,133.06 A140,140 0 0,1 -138.56, -24.3 z" fill="#a1887f" />
+                            <!-- Asian Expatriates - 15% (54 deg) -->
+                            <path d="M0,0 L-138.56,-24.3 A140,140 0 0,1 -82.25,-113.83 z" fill="#bcaaa4" />
+                            <!-- Tourists - 10% (36 deg) -->
+                            <path d="M0,0 L-82.25,-113.83 A140,140 0 0,1 0,-140 z" fill="#d7ccc8" />
+                        </g>
+
+                        <!-- Legend -->
+                        <g transform="translate(550, 80)" font-size="14">
+                            <rect x="0" y="0" width="20" height="20" fill="#8d6e63" />
+                            <text x="30" y="15">Western Expatriates (30%)</text>
+
+                            <rect x="0" y="30" width="20" height="20" fill="#5d4037" />
+                            <text x="30" y="45">Qatari Nationals (25%)</text>
+
+                            <rect x="0" y="60" width="20" height="20" fill="#a1887f" />
+                            <text x="30" y="75">Arab Expatriates (20%)</text>
+
+                            <rect x="0" y="90" width="20" height="20" fill="#bcaaa4" />
+                            <text x="30" y="105">Asian Expatriates (15%)</text>
+
+                            <rect x="0" y="120" width="20" height="20" fill="#d7ccc8" />
+                            <text x="30" y="135">Tourists (10%)</text>
+                        </g>
+                    </svg>
+                </div>
+
+                <h3>Market Trends in Qatar's Restaurant Industry</h3>
+                <ul>
+                    <li>Rise of experiential dining combining local flavors with global influences</li>
+                    <li>Growing interest in traditional foods presented with modern aesthetics</li>
+                    <li>Increasing demand for premium casual dining options offering value and quality</li>
+                    <li>Rising food awareness and sophistication among consumers seeking unique concepts</li>
+                    <li>Digital integration in ordering, reservations, and marketing</li>
+                    <li>Emphasis on locally sourced ingredients and transparent supply chains</li>
+                </ul>
+
+                <h3>Competitive Analysis</h3>
+                <p>The restaurant landscape in Doha is vibrant but lacks a dedicated, upscale cheese-focused concept.
+                    Key competitors include high-end hotel restaurants, established Middle Eastern fine dining, and
+                    popular international casual chains. Labneh & Co.'s niche focus, quality ingredients, and blend of
+                    tradition/innovation provide a strong competitive edge.</p>
+
+                <div class="chart-container">
+                    <h4 class="text-center mb-4">Competitive Positioning Map</h4>
+                    <svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Axes -->
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+                            </marker>
+                        </defs>
+                        <line x1="100" y1="250" x2="700" y2="250" stroke="#333" stroke-width="1.5"
+                            marker-end="url(#arrowhead)" /> <!-- X Axis -->
+                        <line x1="100" y1="250" x2="100" y2="50" stroke="#333" stroke-width="1.5"
+                            marker-end="url(#arrowhead)" /> <!-- Y Axis -->
+
+                        <!-- Labels -->
+                        <text x="400" y="280" text-anchor="middle" font-size="14">Price Point</text>
+                        <text x="150" y="270" text-anchor="middle" font-size="12">Affordable</text>
+                        <text x="650" y="270" text-anchor="middle" font-size="12">Premium</text>
+
+                        <text transform="rotate(-90 50 150)" x="50" y="150" text-anchor="middle" font-size="14">Focus on
+                            Cheese</text>
+                        <text transform="rotate(-90 70 220)" x="70" y="220" text-anchor="middle"
+                            font-size="12">General</text>
+                        <text transform="rotate(-90 70 80)" x="70" y="80" text-anchor="middle"
+                            font-size="12">Specialized</text>
+
+                        <!-- Competitors (Bubbles with labels) -->
+                        <g transform="translate(250, 200)">
+                            <circle cx="0" cy="0" r="25" fill="#d7ccc8" opacity="0.8" />
+                            <text text-anchor="middle" font-size="10">Local Cafes</text>
+                        </g>
+                        <g transform="translate(450, 170)">
+                            <circle cx="0" cy="0" r="30" fill="#d7ccc8" opacity="0.8" />
+                            <text text-anchor="middle" dy="-5" font-size="10">Hotel</text>
+                            <text text-anchor="middle" dy="7" font-size="10">Restaurants</text>
+                        </g>
+                        <g transform="translate(550, 210)">
+                            <circle cx="0" cy="0" r="30" fill="#d7ccc8" opacity="0.8" />
+                            <text text-anchor="middle" dy="-5" font-size="10">Int'l Casual</text>
+                            <text text-anchor="middle" dy="7" font-size="10">Chains</text>
+                        </g>
+                        <g transform="translate(350, 150)">
+                            <circle cx="0" cy="0" r="28" fill="#d7ccc8" opacity="0.8" />
+                            <text text-anchor="middle" dy="-5" font-size="10">Mid-East</text>
+                            <text text-anchor="middle" dy="7" font-size="10">Dining</text>
+                        </g>
+
+                        <!-- Our Position -->
+                        <g transform="translate(600, 100)">
+                            <circle cx="0" cy="0" r="35" fill="#a1887f" stroke="#5d4037" stroke-width="1" />
+                            <text text-anchor="middle" dy="-5" font-size="12" fill="white"
+                                font-weight="bold">Labneh</text>
+                            <text text-anchor="middle" dy="10" font-size="12" fill="white" font-weight="bold">&
+                                Co.</text>
+                            <animateTransform attributeName="transform" type="scale" from="1" to="1.05" dur="1.5s"
+                                repeatCount="indefinite" additive="sum" accumulate="sum" />
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Location & Facility -->
+            <section id="location-facility">
+                <h2><i class="fas fa-map-marker-alt mr-2 text-2xl text-a1887f"></i> 4. Location & Facility</h2>
+
+                <h3>Proposed Location Strategy</h3>
+                <p>The ideal location will be in a high-visibility, high-footfall area frequented by our target
+                    demographics. Key considerations include accessibility, ambiance, and potential for outdoor seating.
+                </p>
+                <p><strong>Primary Target Zones:</strong></p>
+                <ul>
+                    <li><strong>The Pearl-Qatar:</strong> Offers an affluent resident base, tourist traffic, and
+                        potential for premium waterfront settings.</li>
+                    <li><strong>Msheireb Downtown Doha:</strong> Provides a blend of cultural appeal, modern
+                        infrastructure, and a mix of business/leisure visitors.</li>
+                </ul>
+
+                <div class="photo-placeholder">
+                    <p><i class="fas fa-camera mr-2"></i> Location Visualization Placeholder: e.g., Waterfront View at
+                        The Pearl</p>
+                </div>
+
+                <h3>Facility Requirements & Design Concept</h3>
+                <ul>
+                    <li><strong>Size:</strong> Approximately 250-300 square meters.</li>
+                    <li><strong>Capacity:</strong> Seating for 80-100 guests (indoor and outdoor).</li>
+                    <li><strong>Key Features:</strong> Partially open kitchen with cheese prep viewing area, small
+                        private dining space (10-15 guests), comfortable outdoor terrace (potentially
+                        climate-controlled).</li>
+                    <li><strong>Ambiance:</strong> Modern contemporary design infused with subtle, sophisticated
+                        Qatari/Middle Eastern architectural elements and textures. Use of the brand's color palette.
+                    </li>
+                </ul>
+
+                <div class="chart-container">
+                    <h4 class="text-center mb-4">Conceptual Floor Plan Layout</h4>
+                    <svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Base rectangle -->
+                        <rect x="50" y="50" width="700" height="200" fill="#f9f5f0" stroke="#5d4037" stroke-width="1" />
+
+                        <!-- Entrance Area -->
+                        <rect x="380" y="250" width="40" height="15" fill="#8d6e63" />
+                        <text x="400" y="245" text-anchor="middle" font-size="10" fill="#333">Entrance</text>
+                        <rect x="370" y="220" width="60" height="30" fill="#a1887f" rx="3" />
+                        <text x="400" y="238" text-anchor="middle" font-size="10" fill="white">Reception</text>
+
+                        <!-- Main Dining -->
+                        <rect x="150" y="80" width="350" height="150" fill="#ffffff" stroke="#a1887f" stroke-width="0.5"
+                            stroke-dasharray="4 2" />
+                        <text x="325" y="155" text-anchor="middle" font-size="14" fill="#5d4037">Main Dining Area</text>
+                        <!-- Sample tables -->
+                        <circle cx="200" cy="120" r="15" fill="#d7ccc8" />
+                        <circle cx="200" cy="180" r="15" fill="#d7ccc8" />
+                        <rect x="280" y="100" width="30" height="30" fill="#d7ccc8" />
+                        <rect x="280" y="160" width="30" height="30" fill="#d7ccc8" />
+                        <rect x="380" y="120" width="60" height="30" fill="#d7ccc8" />
+                        <rect x="380" y="180" width="60" height="30" fill="#d7ccc8" />
+
+                        <!-- Open Kitchen -->
+                        <rect x="520" y="80" width="200" height="150" fill="#e0d8c0" stroke="#a1887f"
+                            stroke-width="0.5" />
+                        <text x="620" y="155" text-anchor="middle" font-size="14" fill="#5d4037">Open Kitchen / Cheese
+                            Prep</text>
+                        <line x1="520" y1="100" x2="720" y2="100" stroke="#a1887f" stroke-width="1" />
+                        <!-- Counter line -->
+
+                        <!-- Private Dining -->
+                        <rect x="60" y="80" width="80" height="60" fill="#ffffff" stroke="#a1887f" stroke-width="0.5" />
+                        <text x="100" y="115" text-anchor="middle" font-size="10" fill="#5d4037">Private</text>
+                        <text x="100" y="128" text-anchor="middle" font-size="10" fill="#5d4037">Dining</text>
+
+                        <!-- Terrace -->
+                        <rect x="150" y="30" width="350" height="40" fill="#d7ccc8" stroke="#a1887f" stroke-width="0.5"
+                            stroke-dasharray="4 2" />
+                        <text x="325" y="55" text-anchor="middle" font-size="14" fill="#5d4037">Outdoor Terrace</text>
+
+                        <!-- Restrooms -->
+                        <rect x="60" y="160" width="80" height="70" fill="#f0f0f0" stroke="#a1887f"
+                            stroke-width="0.5" />
+                        <text x="100" y="195" text-anchor="middle" font-size="12" fill="#5d4037">Restrooms</text>
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Menu -->
+            <section id="menu">
+                <h2><i class="fas fa-book-open mr-2 text-2xl text-a1887f"></i> 5. Menu & Food Concept</h2>
+
+                <p>Labneh & Co. offers a curated menu celebrating cheese, particularly Middle Eastern varieties,
+                    complemented by high-quality halal chicken and beef. The concept blends tradition with modern
+                    culinary innovation.</p>
+
+                <div class="accent-box">
+                    <h4><i class="fas fa-seedling mr-2 text-a1887f"></i>Culinary Philosophy</h4>
+                    <p>We prioritize fresh, high-quality ingredients, sourcing locally when possible and importing
+                        specialty cheeses. Select cheeses like labneh variations will be made in-house. Our dishes aim
+                        to be both familiar and surprising, respecting heritage while embracing creativity.</p>
+                </div>
+
+                <h3>Streamlined Menu Highlights</h3>
+
+                <h4 class="mt-6 mb-3">Starters & Small Plates</h4>
+                <div class="menu-item">
+                    <span class="menu-item-name">Labneh Tasting Flight</span>
+                    <span class="menu-item-price">QAR 65</span>
+                    <p class="menu-item-description">Selection of house-made labneh: za'atar, sumac & olive, honey &
+                        pistachio, classic.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Crispy Halloumi Bites</span>
+                    <span class="menu-item-price">QAR 55</span>
+                    <p class="menu-item-description">Golden-fried halloumi served with a fig and pomegranate dip.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Akkawi & Date Parcels</span>
+                    <span class="menu-item-price">QAR 60</span>
+                    <p class="menu-item-description">Warm Medjool dates stuffed with mild akkawi cheese, wrapped in beef
+                        bacon (optional), drizzled with date molasses.</p>
+                </div>
+
+                <h4 class="mt-6 mb-3">Cheese Focused Mains</h4>
+                <div class="menu-item">
+                    <span class="menu-item-name">Levantine Cheese Platter</span>
+                    <span class="menu-item-price">QAR 120</span>
+                    <p class="menu-item-description">Curated selection: Jibneh Arabieh, Shanklish, Halloumi, Labneh
+                        balls in oil, served with olives, honeycomb, and artisanal bread.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Kunafa-Crusted Hammour</span>
+                    <span class="menu-item-price">QAR 145</span>
+                    <p class="menu-item-description">Local Hammour fillet with a crispy kunafa and Nabulsi cheese crust,
+                        served with a lemon-tahini sauce.</p>
+                </div>
+                <!-- Add more cheese mains if needed -->
+
+
+                <h4 class="mt-6 mb-3">Chicken & Beef Mains</h4>
+                <div class="menu-item">
+                    <span class="menu-item-name">Smoked Cheese Stuffed Chicken</span>
+                    <span class="menu-item-price">QAR 115</span>
+                    <p class="menu-item-description">Chicken breast stuffed with smoked kashkaval cheese and herbs,
+                        served with freekeh risotto.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Beef Kofta with Molten Halloumi</span>
+                    <span class="menu-item-price">QAR 140</span>
+                    <p class="menu-item-description">Spiced beef kofta skewers served over saffron rice with grilled
+                        halloumi and tomato relish.</p>
+                </div>
+                <!-- Add more meat mains if needed -->
+
+                <h4 class="mt-6 mb-3">Desserts</h4>
+                <div class="menu-item">
+                    <span class="menu-item-name">Signature Kunafa Cheesecake</span>
+                    <span class="menu-item-price">QAR 65</span>
+                    <p class="menu-item-description">Creamy cheesecake base with a crisp kunafa topping, rosewater
+                        syrup, and pistachios.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Labneh & Honey Panna Cotta</span>
+                    <span class="menu-item-price">QAR 50</span>
+                    <p class="menu-item-description">Silky labneh panna cotta infused with orange blossom, topped with
+                        local honey and candied nuts.</p>
+                </div>
+
+                <h4 class="mt-6 mb-3">Signature Beverages</h4>
+                <div class="menu-item">
+                    <span class="menu-item-name">Saffron & Cardamom Karak</span>
+                    <span class="menu-item-price">QAR 30</span>
+                    <p class="menu-item-description">Rich, aromatic milk tea, brewed with premium tea leaves, saffron,
+                        and cardamom.</p>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Minted Rose Lemonade</span>
+                    <span class="menu-item-price">QAR 35</span>
+                    <p class="menu-item-description">Refreshing blend of fresh lemon juice, mint leaves, and a hint of
+                        rosewater.</p>
+                </div>
+
+                <div class="photo-placeholder">
+                    <p><i class="fas fa-camera mr-2"></i> Menu Item Photography Placeholder: e.g., The Labneh Tasting
+                        Flight</p>
+                </div>
+            </section>
+
+            <!-- Operational Plan -->
+            <section id="operational-plan">
+                <h2><i class="fas fa-cogs mr-2 text-2xl text-a1887f"></i> 6. Operational Plan</h2>
+
+                <h3>Staffing Structure & Requirements</h3>
+                <p>A skilled team is crucial. Key roles include General Manager, Executive Chef (with cheese expertise),
+                    Restaurant Manager, Sous Chef, Pastry Chef, Service Staff, Kitchen Crew, and Marketing support.</p>
+                <div class="organizational-chart">
+                    <h4 class="text-center mb-4">Organizational Structure</h4>
+                    <svg width="100%" height="350" viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Styling nodes -->
+                        <style>
+                            .org-rect {
+                                fill: #f9f5f0;
+                                stroke: #a1887f;
+                                stroke-width: 1;
+                                rx: 5;
+                            }
+
+                            .org-text {
+                                font-size: 12px;
+                                fill: #5d4037;
+                                text-anchor: middle;
+                                dominant-baseline: middle;
+                            }
+
+                            .org-line {
+                                stroke: #a1887f;
+                                stroke-width: 1;
+                            }
+
+                            .level1 {
+                                fill: #5d4037;
+                            }
+
+                            .level1 text {
+                                fill: white;
+                                font-weight: bold;
+                            }
+
+                            .level2 {
+                                fill: #8d6e63;
+                            }
+
+                            .level2 text {
+                                fill: white;
+                            }
+
+                            .level3 {
+                                fill: #a1887f;
+                            }
+
+                            .level3 text {
+                                fill: white;
+                            }
+
+                            .level4 {
+                                fill: #f9f5f0;
+                            }
+
+                            .level4 text {
+                                fill: #5d4037;
+                            }
+                        </style>
+
+                        <!-- Nodes -->
+                        <g transform="translate(400, 40)">
+                            <rect width="140" height="40" class="org-rect level1" /> <text x="70" y="20"
+                                class="org-text">General Manager</text>
+                        </g>
+
+                        <g transform="translate(150, 110)">
+                            <rect width="120" height="40" class="org-rect level2" /> <text x="60" y="20"
+                                class="org-text">Executive Chef</text>
+                        </g>
+                        <g transform="translate(340, 110)">
+                            <rect width="120" height="40" class="org-rect level2" /> <text x="60" y="20"
+                                class="org-text">Restaurant Mgr</text>
+                        </g>
+                        <g transform="translate(530, 110)">
+                            <rect width="140" height="40" class="org-rect level2" /> <text x="70" y="20"
+                                class="org-text">Marketing/Admin</text>
+                        </g>
+
+                        <g transform="translate(80, 180)">
+                            <rect width="100" height="35" class="org-rect level3" /> <text x="50" y="18"
+                                class="org-text">Sous Chef</text>
+                        </g>
+                        <g transform="translate(200, 180)">
+                            <rect width="100" height="35" class="org-rect level3" /> <text x="50" y="18"
+                                class="org-text">Pastry Chef</text>
+                        </g>
+                        <g transform="translate(350, 180)">
+                            <rect width="100" height="35" class="org-rect level3" /> <text x="50" y="18"
+                                class="org-text">Supervisors</text>
+                        </g>
+                        <g transform="translate(500, 180)">
+                            <rect width="100" height="35" class="org-rect level3" /> <text x="50" y="18"
+                                class="org-text">Bar Lead</text>
+                        </g>
+
+                        <g transform="translate(140, 250)">
+                            <rect width="100" height="35" class="org-rect level4" /> <text x="50" y="18"
+                                class="org-text">Kitchen Crew</text>
+                        </g>
+                        <g transform="translate(350, 250)">
+                            <rect width="100" height="35" class="org-rect level4" /> <text x="50" y="18"
+                                class="org-text">Service Staff</text>
+                        </g>
+                        <g transform="translate(560, 250)">
+                            <rect width="100" height="35" class="org-rect level4" /> <text x="50" y="18"
+                                class="org-text">Support Staff</text>
+                        </g>
+
+                        <!-- Lines -->
+                        <line class="org-line" x1="400" y1="60" x2="400" y2="90" />
+                        <line class="org-line" x1="210" y1="90" x2="590" y2="90" />
+                        <line class="org-line" x1="210" y1="90" x2="210" y2="110" />
+                        <line class="org-line" x1="400" y1="90" x2="400" y2="110" />
+                        <line class="org-line" x1="590" y1="90" x2="590" y2="110" />
+
+                        <line class="org-line" x1="210" y1="150" x2="210" y2="160" />
+                        <line class="org-line" x1="130" y1="160" x2="250" y2="160" />
+                        <line class="org-line" x1="130" y1="160" x2="130" y2="180" />
+                        <line class="org-line" x1="250" y1="160" x2="250" y2="180" />
+
+                        <line class="org-line" x1="400" y1="150" x2="400" y2="180" />
+                        <line class="org-line" x1="590" y1="150" x2="590" y2="160" />
+                        <line class="org-line" x1="550" y1="160" x2="590" y2="160" />
+                        <line class="org-line" x1="550" y1="160" x2="550" y2="180" />
+
+                        <line class="org-line" x1="130" y1="215" x2="190" y2="250" />
+                        <line class="org-line" x1="400" y1="215" x2="400" y2="250" />
+                        <line class="org-line" x1="550" y1="215" x2="610" y2="250" />
+                    </svg>
+                </div>
+
+                <h3>Key Operational Processes</h3>
+                <ul>
+                    <li><strong>Supply Chain:</strong> Establish relationships with reliable local suppliers for
+                        produce/meats and reputable importers for specialty cheeses. Inventory management system (e.g.,
+                        POS integrated) is essential.</li>
+                    <li><strong>Kitchen Workflow:</strong> Standardized recipes, batch preparation for base
+                        sauces/components, à la minute finishing for freshness. Clear sections for hot, cold, pastry,
+                        and cheese prep.</li>
+                    <li><strong>Service Standards:</strong> Emphasis on knowledgeable staff (menu, cheese types),
+                        efficient order taking (digital POS), table management, and creating a welcoming atmosphere.
+                        Regular training.</li>
+                    <li><strong>Quality Control:</strong> Daily checks by chefs, regular tasting, monitoring customer
+                        feedback, adherence to hygiene standards (HACCP principles).</li>
+                </ul>
+
+                <h3>Legal & Compliance (Qatar Specific)</h3>
+                <p>Ensuring full compliance with Qatari regulations is paramount.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Requirement Area</th>
+                            <th>Key Details & Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Business Registration</td>
+                            <td>Establish LLC (potentially with Qatari partner), obtain Commercial Registration (CR),
+                                Trade License, Tax Card.</td>
+                        </tr>
+                        <tr>
+                            <td>Ministry Approvals</td>
+                            <td>Ministry of Commerce and Industry (MOCI), Ministry of Municipality (Baladiya) for food
+                                establishment license, Civil Defence for safety, potentially Ministry of Public Health
+                                (MoPH).</td>
+                        </tr>
+                        <tr>
+                            <td>Staffing Compliance</td>
+                            <td>Obtain necessary visas/residence permits, health certificates for all food handlers
+                                (renewed periodically), potentially specific food safety certifications.</td>
+                        </tr>
+                        <tr>
+                            <td>Premises</td>
+                            <td>Lease agreement compliance, building permits for renovations, adherence to zoning laws,
+                                Civil Defence inspection and approval.</td>
+                        </tr>
+                        <tr>
+                            <td>Ongoing</td>
+                            <td>Annual renewal of licenses, regular health/safety inspections, tax compliance, adherence
+                                to labor laws.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Marketing & Branding -->
+            <section id="marketing">
+                <h2><i class="fas fa-bullhorn mr-2 text-2xl text-a1887f"></i> 7. Marketing & Branding Strategy</h2>
+
+                <h3>Brand Identity</h3>
+                <ul>
+                    <li><strong>Name:</strong> Labneh & Co. (Evokes tradition and modernity)</li>
+                    <li><strong>Tagline:</strong> *Example: "A Taste of Tradition, Reimagined."* or *"Doha's Destination
+                        for Cheese Lovers."*</li>
+                    <li><strong>Brand Voice:</strong> Sophisticated, warm, knowledgeable, passionate about cheese and
+                        culinary heritage.</li>
+                    <li><strong>Visuals:</strong> Use the defined color palette, high-quality food photography, elegant
+                        typography.</li>
+                </ul>
+
+
+                <h4>Core Color Palette</h4>
+                <div class="flex flex-wrap justify-center my-6">
+                    <div class="color-swatch" style="background-color: #f9f5f0;">
+                        <p>Cream<br>#f9f5f0</p>
+                    </div>
+                    <div class="color-swatch" style="background-color: #5d4037;">
+                        <p class="text-white">Deep Brown<br>#5d4037</p>
+                    </div>
+                    <div class="color-swatch" style="background-color: #a1887f;">
+                        <p class="text-white">Copper<br>#a1887f</p>
+                    </div>
+                    <div class="color-swatch" style="background-color: #e0d8c0;">
+                        <p>Sand<br>#e0d8c0</p> <!-- Renamed Olive Green -->
+                    </div>
+                    <div class="color-swatch" style="background-color: #8d6e63;"> <!-- Added accent color -->
+                        <p class="text-white">Warm Taupe<br>#8d6e63</p>
+                    </div>
+                </div>
+
+                <h3>Marketing Channels & Mix</h3>
+                <p>A multi-channel approach will target different segments effectively.</p>
+                <div class="chart-container">
+                    <h4 class="text-center mb-4">Illustrative Marketing Budget Allocation</h4>
+                    <svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                        <style>
+                            .bar-label {
+                                font-size: 12px;
+                                text-anchor: middle;
+                            }
+                        </style>
+                        <g transform="translate(50, 30)"> <!-- Added top margin -->
+                            <!-- Digital Marketing (40%) -->
+                            <rect x="50" y="50" width="100" height="200" fill="#5d4037" />
+                            <text x="100" y="265" class="bar-label">Digital (40%)</text>
+                            <text x="100" y="40" class="bar-label" fill="#5d4037" font-weight="bold">Social Media, SEO,
+                                Ads</text>
+
+                            <!-- PR & Influencers (25%) -->
+                            <rect x="200" y="112.5" width="100" height="137.5" fill="#8d6e63" />
+                            <text x="250" y="265" class="bar-label">PR/Influencers (25%)</text>
+                            <text x="250" y="102.5" class="bar-label" fill="#8d6e63" font-weight="bold">Media Relations,
+                                Tastings</text>
+
+                            <!-- Partnerships (15%) -->
+                            <rect x="350" y="162.5" width="100" height="87.5" fill="#a1887f" />
+                            <text x="400" y="265" class="bar-label">Partnerships (15%)</text>
+                            <text x="400" y="152.5" class="bar-label" fill="#a1887f" font-weight="bold">Hotels,
+                                Corporates</text>
+
+                            <!-- Experiential / Events (10%) -->
+                            <rect x="500" y="187.5" width="100" height="62.5" fill="#bcaaa4" />
+                            <text x="550" y="265" class="bar-label">Events (10%)</text>
+                            <text x="550" y="177.5" class="bar-label" fill="#bcaaa4" font-weight="bold">Workshops,
+                                Tastings</text>
+
+                            <!-- Local/Print (10%) -->
+                            <rect x="650" y="187.5" width="100" height="62.5" fill="#d7ccc8" />
+                            <text x="700" y="265" class="bar-label">Local/Print (10%)</text>
+                            <text x="700" y="177.5" class="bar-label" fill="#d7ccc8" font-weight="bold">Magazines, Local
+                                Ads</text>
+
+                            <!-- Y-axis guide -->
+                            <line x1="40" y1="50" x2="40" y2="250" stroke="#ccc" stroke-width="1" />
+                            <text x="30" y="50" font-size="10" text-anchor="end">100%</text>
+                            <text x="30" y="250" font-size="10" text-anchor="end">0%</text>
+                        </g>
+                    </svg>
+                </div>
+
+                <h3>Key Marketing Initiatives</h3>
+                <ul>
+                    <li><strong>Digital Presence:</strong> Visually appealing website with seamless online reservations
+                        (integrated with tools like EatApp or SevenRooms), professional Instagram & TikTok showcasing
+                        food, ambiance, and cheese-making process. Targeted ads on social media and Google.</li>
+                    <li><strong>Public Relations:</strong> Pre-launch buzz building, media launch event, ongoing press
+                        releases for new menus/events, collaborations with food bloggers and influencers.</li>
+                    <li><strong>Experiential Marketing:</strong> Offer unique experiences like cheese tasting flights
+                        paired with beverages, potential cheese-making demonstrations or mini-workshops.</li>
+                    <li><strong>Partnerships:</strong> Collaborate with luxury hotels for concierge recommendations,
+                        corporate partnerships for business lunches/events, participation in local food festivals (e.g.,
+                        Qatar International Food Festival).</li>
+                    <li><strong>Loyalty Program:</strong> Implement a simple digital loyalty program to encourage repeat
+                        visits.</li>
+                </ul>
+
+                <h3>Launch Strategy (Phased Approach)</h3>
+                <ol>
+                    <li><strong>Phase 1: Pre-Launch (2 Months Out):</strong> "Coming Soon" campaign on social media,
+                        website landing page collecting emails, initial PR outreach, private tastings for key
+                        influencers/media.</li>
+                    <li><strong>Phase 2: Soft Opening (1-2 Weeks):</strong> Invite-only period to test operations and
+                        gather feedback. Refine service and menu based on initial response.</li>
+                    <li><strong>Phase 3: Grand Opening:</strong> Official launch event for media, VIPs, and public.
+                        Special launch promotions. Sustained marketing push across all channels.</li>
+                    <li><strong>Phase 4: Ongoing Marketing:</strong> Regular content updates, seasonal menu promotions,
+                        targeted campaigns, continuous engagement with customers online and offline.</li>
+                </ol>
+            </section>
+
+            <!-- Financial Projections -->
+            <section id="financial">
+                <h2><i class="fas fa-dollar-sign mr-2 text-2xl text-a1887f"></i> 8. Financial Projections</h2>
+
+                <h3>Estimated Startup Costs</h3>
+                <p>Initial investment covers premises, fit-out, equipment, licensing, inventory, marketing, and working
+                    capital.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th class="text-right">Estimated Cost (QAR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Leasehold Improvements & Design</td>
+                            <td class="text-right">1,200,000</td>
+                        </tr>
+                        <tr>
+                            <td>Kitchen Equipment & Technology (POS)</td>
+                            <td class="text-right">550,000</td>
+                        </tr>
+                        <tr>
+                            <td>Furniture, Fixtures & Equipment (FF&E)</td>
+                            <td class="text-right">400,000</td>
+                        </tr>
+                        <tr>
+                            <td>Initial Inventory (Food & Beverage)</td>
+                            <td class="text-right">120,000</td>
+                        </tr>
+                        <tr>
+                            <td>Licenses, Permits, Legal Fees</td>
+                            <td class="text-right">80,000</td>
+                        </tr>
+                        <tr>
+                            <td>Pre-Opening Marketing & Launch</td>
+                            <td class="text-right">200,000</td>
+                        </tr>
+                        <tr>
+                            <td>Security Deposits (Rent, Utilities)</td>
+                            <td class="text-right">150,000</td>
+                        </tr>
+                        <tr>
+                            <td>Working Capital (3-6 months op. expenses)</td>
+                            <td class="text-right">500,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Estimated Startup Costs</strong></td>
+                            <td class="text-right"><strong>3,200,000</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Revenue Projections (Illustrative 3-Year)</h3>
+                <ul>
+                    <li><strong>Average Revenue Per Cover (APC):</strong> Estimated at QAR 220.</li>
+                    <li><strong>Target Daily Covers:</strong> Year 1: 120; Year 2: 160; Year 3: 190 (assuming ramp-up).
+                    </li>
+                    <li><strong>Operating Days:</strong> Approx. 360 days/year.</li>
+                </ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th class="text-right">Projected Annual Revenue (QAR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Year 1</td>
+                            <td class="text-right">~ 9,500,000</td>
+                        </tr>
+                        <tr>
+                            <td>Year 2</td>
+                            <td class="text-right">~ 12,600,000</td>
+                        </tr>
+                        <tr>
+                            <td>Year 3</td>
+                            <td class="text-right">~ 15,000,000</td>
+                        </tr>
+                        <!-- Note: These are simplified calculations (APC * Daily Covers * Days) -->
+                    </tbody>
+                </table>
+
+                <div class="chart-container">
+                    <h4 class="text-center mb-4">3-Year Revenue & Profit Trend (Illustrative)</h4>
+                    <svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                        <style>
+                            .axis-line {
+                                stroke: #aaa;
+                                stroke-width: 1;
+                            }
+
+                            .label {
+                                font-size: 12px;
+                                fill: #666;
+                                text-anchor: middle;
+                            }
+
+                            .year-label {
+                                font-size: 14px;
+                                fill: #333;
+                                text-anchor: middle;
+                            }
+
+                            .revenue-line {
+                                stroke: #5d4037;
+                                stroke-width: 3;
+                                fill: none;
+                            }
+
+                            .profit-line {
+                                stroke: #a1887f;
+                                stroke-width: 2.5;
+                                fill: none;
+                                stroke-dasharray: 5, 3;
+                            }
+
+                            .dot {
+                                stroke-width: 2;
+                            }
+                        </style>
+                        <g transform="translate(60, 30)"> <!-- Margin for labels -->
+                            <!-- Y Axis -->
+                            <line x1="0" y1="0" x2="0" y2="240" class="axis-line" />
+                            <text x="-15" y="0" dy="5" class="label" text-anchor="end">16M</text>
+                            <text x="-15" y="60" dy="5" class="label" text-anchor="end">12M</text>
+                            <text x="-15" y="120" dy="5" class="label" text-anchor="end">8M</text>
+                            <text x="-15" y="180" dy="5" class="label" text-anchor="end">4M</text>
+                            <text x="-15" y="240" dy="5" class="label" text-anchor="end">0</text>
+                            <text transform="rotate(-90 -40 120)" x="-40" y="120" class="label"
+                                text-anchor="middle">QAR</text>
+
+                            <!-- X Axis -->
+                            <line x1="0" y1="240" x2="700" y2="240" class="axis-line" />
+                            <text x="150" y="260" class="year-label">Year 1</text>
+                            <text x="400" y="260" class="year-label">Year 2</text>
+                            <text x="650" y="260" class="year-label">Year 3</text>
+
+                            <!-- Data Points (Illustrative: Y=0 is 16M, Y=240 is 0M) -->
+                            <!-- Revenue: 9.5M (Y=100), 12.6M (Y=51), 15M (Y=15) -->
+                            <polyline class="revenue-line" points="150,98 400,51 650,15" />
+                            <circle cx="150" cy="98" r="4" fill="#fff" stroke="#5d4037" class="dot" />
+                            <circle cx="400" cy="51" r="4" fill="#fff" stroke="#5d4037" class="dot" />
+                            <circle cx="650" cy="15" r="4" fill="#fff" stroke="#5d4037" class="dot" />
+
+                            <!-- Profit: Assume loss/breakeven Y1, moderate Y2, good Y3 -->
+                            <!-- e.g., -0.5M (Y=247), 1.5M (Y=217), 3.0M (Y=195) -->
+                            <polyline class="profit-line" points="150,247 400,217 650,195" />
+                            <circle cx="150" cy="247" r="3" fill="#fff" stroke="#a1887f" class="dot" />
+                            <circle cx="400" cy="217" r="3" fill="#fff" stroke="#a1887f" class="dot" />
+                            <circle cx="650" cy="195" r="3" fill="#fff" stroke="#a1887f" class="dot" />
+
+                            <!-- Legend -->
+                            <g transform="translate(550, 0)">
+                                <line x1="0" y1="0" x2="30" y2="0" class="revenue-line" stroke-width="2" />
+                                <text x="40" y="5" class="label">Revenue</text>
+                                <line x1="0" y1="20" x2="30" y2="20" class="profit-line" stroke-width="2" />
+                                <text x="40" y="25" class="label">Est. Profit</text>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+
+                <h3>Key Expense Categories (Estimated % of Revenue)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Expense Category</th>
+                            <th class="text-right">Target Range (%)</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cost of Goods Sold (COGS)</td>
+                            <td class="text-right">28 - 33%</td>
+                            <td>Food & Beverage costs. Key area for control.</td>
+                        </tr>
+                        <tr>
+                            <td>Labor Costs (Salaries, Benefits)</td>
+                            <td class="text-right">25 - 30%</td>
+                            <td>Includes management, kitchen, service staff.</td>
+                        </tr>
+                        <tr>
+                            <td>Rent & Occupancy</td>
+                            <td class="text-right">10 - 15%</td>
+                            <td>Highly location dependent. Includes utilities.</td>
+                        </tr>
+                        <tr>
+                            <td>Marketing & Promotion</td>
+                            <td class="text-right">3 - 5%</td>
+                            <td>Ongoing marketing activities post-launch.</td>
+                        </tr>
+                        <tr>
+                            <td>Operating Supplies</td>
+                            <td class="text-right">2 - 4%</td>
+                            <td>Cleaning, disposables, smallwares.</td>
+                        </tr>
+                        <tr>
+                            <td>Repairs & Maintenance</td>
+                            <td class="text-right">1 - 3%</td>
+                            <td>Equipment upkeep, minor repairs.</td>
+                        </tr>
+                        <tr>
+                            <td>Admin & General (Inc. Licenses)</td>
+                            <td class="text-right">3 - 5%</td>
+                            <td>Insurance, bank fees, professional services, renewals.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Estimated Operating Expenses</strong></td>
+                            <td class="text-right"><strong>72 - 95%</strong></td>
+                            <td>Excludes depreciation/amortization, financing costs.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Profitability & Breakeven</h3>
+                <ul>
+                    <li><strong>Breakeven Point:</strong> Estimated to be reached within 18-24 months, depending on
+                        revenue ramp-up and cost control.</li>
+                    <li><strong>Target Profit Margin (Net):</strong> Aiming for 10-15% net profit margin by Year 3,
+                        after covering all operational costs and overheads.</li>
+                    <li><strong>Return on Investment (ROI):</strong> Projected ROI of 25-30% achievable by the end of
+                        Year 3 or early Year 4, based on initial investment and cumulative profits.</li>
+                </ul>
+            </section>
+
+            <!-- Risk Assessment -->
+            <section id="risk">
+                <h2><i class="fas fa-exclamation-triangle mr-2 text-2xl text-a1887f"></i> 9. Risk Assessment &
+                    Mitigation</h2>
+                <p>Identifying potential risks and planning mitigation strategies is crucial for success.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Risk Factor</th>
+                            <th>Potential Impact</th>
+                            <th>Mitigation Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Intense Competition</strong></td>
+                            <td>Difficulty attracting customers, price pressure.</td>
+                            <td>Unique cheese-focused USP, exceptional quality & service, strong branding, loyalty
+                                programs, targeted marketing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Staffing Challenges</strong></td>
+                            <td>Difficulty recruiting/retaining skilled staff (esp. cheese knowledge), high turnover
+                                costs.</td>
+                            <td>Competitive compensation, positive work environment, robust training programs (internal
+                                & external), clear career paths, potentially sourcing specialized international talent.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Supply Chain Disruptions</strong></td>
+                            <td>Inconsistent quality/availability of key ingredients (esp. imported cheeses), price
+                                volatility.</td>
+                            <td>Develop relationships with multiple suppliers, diversify menu slightly to allow
+                                flexibility, in-house production of core items (labneh), strong inventory management.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Economic Downturn</strong></td>
+                            <td>Reduced consumer discretionary spending affecting high-end dining.</td>
+                            <td>Offer varied price points within the menu, introduce value-driven lunch specials or set
+                                menus, focus on exceptional value proposition.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Regulatory Changes</strong></td>
+                            <td>New health codes, licensing requirements, labor laws increasing costs or complexity.
+                            </td>
+                            <td>Stay informed via industry associations, engage local legal/consulting expertise,
+                                maintain buffer for compliance costs, proactive adherence to standards.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Food Safety Incidents</strong></td>
+                            <td>Damage to reputation, legal action, closure.</td>
+                            <td>Strict adherence to HACCP and local hygiene standards, rigorous staff training, quality
+                                checks on suppliers, transparent processes.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="accent-box mt-8">
+                    <h4><i class="fas fa-shield-alt mr-2 text-a1887f"></i>Proactive Risk Management</h4>
+                    <p>We will implement a continuous risk monitoring process involving regular management reviews,
+                        analysis of financial performance and customer feedback, and staying updated on market trends
+                        and regulations. Maintaining adequate financial reserves and contingency plans for key risks
+                        (e.g., equipment failure, key staff departure) will be prioritized.</p>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section id="conclusion">
+                <h2><i class="fas fa-check-circle mr-2 text-2xl text-a1887f"></i> 10. Conclusion</h2>
+
+                <p>Labneh & Co. presents a compelling opportunity to introduce a unique and sophisticated cheese-focused
+                    dining experience to Doha's dynamic F&B market. By blending authentic Middle Eastern cheese
+                    traditions with international culinary innovation, complemented by premium meat options, the
+                    restaurant is strategically positioned to appeal to a diverse clientele of locals, expatriates, and
+                    tourists.</p>
+
+                <p>The concept capitalizes on key market trends favoring experiential dining, quality ingredients, and
+                    unique culinary narratives. While challenges exist within the competitive landscape, our distinct
+                    USP, strong operational plan, targeted marketing, and experienced management approach provide a
+                    solid foundation for success.</p>
+
+                <div class="accent-box">
+                    <h4><i class="fas fa-key mr-2 text-a1887f"></i>Path to Success</h4>
+                    <ul class="mb-0">
+                        <li><strong>Unwavering Focus on Quality:</strong> From ingredients to service execution.</li>
+                        <li><strong>Authenticity & Innovation:</strong> Balancing heritage with modern appeal.</li>
+                        <li><strong>Strong Brand Storytelling:</strong> Communicating the unique concept effectively.
+                        </li>
+                        <li><strong>Operational Excellence:</strong> Efficient systems, cost control, and consistent
+                            delivery.</li>
+                        <li><strong>Customer Centricity:</strong> Listening to feedback and building loyalty.</li>
+                        <li><strong>Adaptability:</strong> Responding effectively to market changes and challenges.</li>
+                    </ul>
+                </div>
+
+                <p class="mt-8 font-semibold">With the planned investment and strategic execution outlined in this
+                    document, Labneh & Co. is poised to become a profitable and highly regarded culinary landmark in
+                    Doha, Qatar.</p>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <p>© 2025 Labneh & Co. All Rights Reserved.</p>
+                <p>Confidential Business Document - Not for Distribution</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Simple Scroll Spy Logic -->
+    <script>
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.sidebar-nav ul li a');
+
+        const activateLink = (id) => {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('active');
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.5) { // Adjust ratio as needed
+                    activateLink(entry.target.getAttribute('id'));
+                }
+            });
+        }, { rootMargin: "0px 0px -40% 0px" }); // Adjust rootMargin to trigger slightly earlier/later
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Initial check in case the user loads partway down the page
+        window.addEventListener('load', () => {
+            let currentActiveFound = false;
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                // Check if section top is within the top half of the viewport
+                if (rect.top >= 0 && rect.top < window.innerHeight / 2 && !currentActiveFound) {
+                    activateLink(section.getAttribute('id'));
+                    currentActiveFound = true;
+                }
+            });
+            // If no section found in the top half, activate the first one visible
+            if (!currentActiveFound) {
+                for (let section of sections) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                        activateLink(section.getAttribute('id'));
+                        break;
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
